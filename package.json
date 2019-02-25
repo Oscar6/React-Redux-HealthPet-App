@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.23",
     "react": "^16.8.3",
@@ -10,6 +11,7 @@
     "react-moment": "^0.8.4",
     "react-redux": "^6.0.1",
     "react-scripts": "2.1.5",
+    "reactstrap": "^7.1.0",
     "redux": "^4.0.1",
     "sfcookies": "^1.0.2"
   },
@@ -17,7 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node-env-run server --exec nodemon | pino-colada",
+    "dev": "run-p server start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +31,16 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-pino-logger": "^4.0.0",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^1.18.10",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^1.4.4",
+    "proxy": "http://localhost:3001",
+    "twilio": "^3.28.1"
+  }
 }

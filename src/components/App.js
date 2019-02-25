@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addReminder, deleteReminder, clearReminders } from '../actions';
+import SMSForm from '../SMSForm';
 import moment from 'moment';
 import 'moment-timezone';
 
@@ -52,7 +53,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="title">
-          HealthPet
+          Appointment Info
         </div>
         <div className="form-inline reminder-form">
           <div className="form-group">
@@ -72,7 +73,7 @@ class App extends Component {
             className="btn btn-success"
             onClick={() => this.addReminder()}
           >
-            Add reminder
+            Add Appointment
           </button>
         </div>
         { this.renderReminders() }
@@ -80,8 +81,9 @@ class App extends Component {
           className="btn btn-danger"
           onClick={() => this.props.clearReminders()}
         >
-        Clear Reminders
+        Remove Appointments
         </div>
+        <SMSForm />
       </div>
     )
   }
