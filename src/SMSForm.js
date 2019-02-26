@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './SMSForm.css';
 
 class SMSForm extends Component {
     constructor(props) {
@@ -16,42 +15,42 @@ class SMSForm extends Component {
         this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onHandleChange(event) {
-        const name = event.target.getAttribute('name');
-        this.setState({
-          message: { ...this.state.message, [name]: event.target.value }
-        });
-      }
-
-      onSubmit(event) {
+    onSubmit(event) {
         event.preventDefault();
         this.setState({ submitting: true });
         fetch('/api/messages', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(this.state.message)
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(this.state.message)
         })
-          .then(res => res.json())
-          .then(data => {
-            if (data.success) {
-              this.setState({
-                error: false,
-                submitting: false,
-                message: {
-                  to: '',
-                  body: ''
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    this.setState({
+                        error: false,
+                        submitting: false,
+                        message: {
+                            to: '',
+                            body: ''
+                        }
+                    });
+                } else {
+                    this.setState({
+                        error: true,
+                        submitting: false
+                    });
                 }
-              });
-            } else {
-              this.setState({
-                error: true,
-                submitting: false
-              });
-            }
-          });
-      }
+            });
+    }
+
+    onHandleChange(event) {
+        const name = event.target.getAttribute('name');
+        this.setState({
+            message: { ...this.state.message, [name]: event.target.value }
+        });
+    }
 
     render() {
         return (
@@ -71,9 +70,9 @@ class SMSForm extends Component {
                 </div>
                 <div>
                     <label htmlFor="body">Body:</label>
-                    <textarea 
-                        name="body" 
-                        id="body" 
+                    <textarea
+                        name="body"
+                        id="body"
                         value={this.state.message.body}
                         onChange={this.onHandleChange}
                     />
@@ -86,9 +85,4 @@ class SMSForm extends Component {
     }
 }
 
-
-SMSForm.propTypes = {
-
-};
-
-export default SMSForm
+export default SMSForm;
