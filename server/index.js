@@ -1,10 +1,11 @@
+const twilio = require('twilio');
+
 const express = require('express');
 const bodyParser = require('body-parser');
+const account = require('./auth');
 const pino = require('express-pino-logger')();
-const client = require('twilio')(
-    process.env.TWILIO_ACCOUT_SID,
-    process.env.TWILIO_AUTH_TOKEN
-  );
+const client = new twilio(account.account, account.token);
+
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,11 +18,15 @@ app.get('/api/greeting', (req, res) => {
   res.send(JSON.stringify({ greeting: `Hello ${name}!` }));
 });
 
+
 app.post('/api/messages', (req, res) => {
+
+  console.log(req.body)
+  // res.send('hello');
     res.header('Content-Type', 'application/json');
     client.messages
     .create({
-      from: process.env.TWILIO_PHONE_NUMBER,
+      from: account.number,
       to: req.body.to,
       body: req.body.body
     })
