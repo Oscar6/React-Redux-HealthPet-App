@@ -25,24 +25,24 @@ class SMSForm extends Component {
             },
             body: JSON.stringify(this.state.message)
         })
-            // .then(res => res.json())
-            // .then(data => {
-            //     if (data.success) {
-            //         this.setState({
-            //             error: false,
-            //             submitting: false,
-            //             message: {
-            //                 to: '',
-            //                 body: ''
-            //             }
-            //         });
-            //     } else {
-            //         this.setState({
-            //             error: true,
-            //             submitting: false
-            //         });
-            //     }
-            // });
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    this.setState({
+                        error: false,
+                        submitting: false,
+                        message: {
+                            to: '',
+                            body: ''
+                        }
+                    });
+                } else {
+                    this.setState({
+                        error: true,
+                        submitting: false
+                    });
+                }
+            });
     }
 
     onHandleChange(event) {

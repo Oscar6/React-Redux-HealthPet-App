@@ -28,6 +28,21 @@
   border-radius: 10px;
 }
 
+.aboutInfo {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%; 
+  height: auto;
+  margin: auto;
+  margin-top: 100px;
+  padding-bottom: 30px;
+  background-color:rgba(50, 113, 196, 0.781); 
+  border-radius: 10px;
+}
+
 .title {
   text-align: center;
   font-size: 26px;
@@ -131,4 +146,20 @@ body {
   font-size: 10px;
   margin-top: 20px;
   margin-left: 50px;
+}
+
+.aboutParagraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
 }

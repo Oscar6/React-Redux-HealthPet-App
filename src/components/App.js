@@ -100,7 +100,6 @@ class App extends Component {
         >
           Remove Appointments
         </div>
-        {/* <SMSForm />  */}
       </div>
     )
   }
