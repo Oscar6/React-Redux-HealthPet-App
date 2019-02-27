@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import {
-  Collapse,
+  // Collapse,
   Navbar,
-  NavbarToggler,
+  // NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  // UncontrolledDropdown,
+  // DropdownToggle,
+  // DropdownMenu,
+  // DropdownItem
 } from "reactstrap";
 
 class Header extends Component {
@@ -36,13 +36,13 @@ class Header extends Component {
           <Collapse isOpen={this.state.isOpen} navbar> */}
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink to="/components/">Components</NavLink>
+                <NavLink href="/components/">Components</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink to="https://github.com/reactstrap/reactstrap">
+              {/* <NavItem>
+                <NavLink href="https://github.com/reactstrap/reactstrap">
                   GitHub
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
               {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Options

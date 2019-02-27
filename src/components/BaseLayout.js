@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 class BaseLayout extends React.Component {
     constructor(props) {
@@ -19,8 +19,8 @@ class BaseLayout extends React.Component {
 }
 
 
-BaseLayout.propTypes = {
+// BaseLayout.propTypes = {
     
-};
+// };
 
 export default BaseLayout;

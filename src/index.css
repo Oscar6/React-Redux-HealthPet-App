@@ -13,6 +13,21 @@
   border-radius: 10px;
 }
 
+.smsForm {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%; 
+  height: auto;
+  margin: auto;
+  margin-top: 100px;
+  padding-bottom: 30px;
+  background-color:rgba(50, 113, 196, 0.781); 
+  border-radius: 10px;
+}
+
 .title {
   text-align: center;
   font-size: 26px;
@@ -76,6 +91,7 @@ body {
   background-color: #dc3545;
   border-color: #dc3545;
   margin-top: 20px;
+  margin-left: 400px;
 }
 
 .title {
@@ -87,4 +103,32 @@ body {
 
 .h4, h4 {
   font-size: 20px;
+}
+
+.h3, h3 {
+  font-size: 20px;
+  color: white;
+}
+
+.notificationButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.btn-primary {
+  color: #fff;
+  background-color: #285fa7;
+  border-color: #285fa7;
+  
+}
+
+.smsButton {
+  color: rgb(0, 0, 0);
+  background-color: #fff075;
+  border-color: #fff075;
+  border-radius: 3px;
+  font-size: 10px;
+  margin-top: 20px;
+  margin-left: 50px;
 }

@@ -54,12 +54,14 @@ class SMSForm extends Component {
 
     render() {
         return (
+            <div className="smsForm">
+            <h3>Enter Mobile and Appointment Info</h3>
             <form
                 onSubmit={this.onSubmit}
                 className={this.state.error ? 'error sms-form' : 'sms-form'}
             >
                 <div>
-                    <label htmlFor="to">To:</label>
+                    <label htmlFor="to">Mobile:</label>
                     <input
                         type="tel"
                         name="to"
@@ -69,7 +71,7 @@ class SMSForm extends Component {
                     />
                 </div>
                 <div>
-                    <label htmlFor="body">Body:</label>
+                    <label htmlFor="body">Message:</label>
                     <textarea
                         name="body"
                         id="body"
@@ -77,10 +79,11 @@ class SMSForm extends Component {
                         onChange={this.onHandleChange}
                     />
                 </div>
-                <button type="submit" disabled={this.state.submitting}>
+                <button className="smsButton" type="submit" disabled={this.state.submitting}>
                     Send message
                 </button>
             </form>
+            </div>
         );
     }
 }

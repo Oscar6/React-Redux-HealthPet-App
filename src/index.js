@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
+import SMSForm from './components/SMSForm';
 // import Header from './components/Header';
 import  { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -19,7 +20,7 @@ ReactDOM.render(
     {/* <App /> */}
     <Switch>
       <Route exact path="/" component={App}/>
-      
+      <Route exact path="/SMSForm" component={SMSForm}/>
     </Switch>
     </BaseLayout>
     </BrowserRouter>

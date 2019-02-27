@@ -12,7 +12,12 @@ class App extends Component {
     this.state = {
       text: '',
       dueDate: ''
-    }
+    };
+    this.routeChange = this.routeChange.bind(this)
+  }
+
+  routeChange = () => {
+    this.props.history.push(`/SMSForm`)
   }
 
   addReminder() {
@@ -42,6 +47,15 @@ class App extends Component {
                 >
                   &#x2715;
                 </div>
+                <div className="notificationButton">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={this.routeChange}
+                  >
+                    Send Text Reminder
+                  </button>
+                </div>
               </li>
             )
           })
@@ -58,17 +72,17 @@ class App extends Component {
         </div>
         <div className="reminder-form">
           <div className="form-group">
-          <h4>Reason for Vet visit</h4>
+            <h4>Reason for Vet visit</h4>
             <input
               className="form-control"
               placeholder="Rabies vax due"
-              onChange={event => this.setState({text: event.target.value})}
+              onChange={event => this.setState({ text: event.target.value })}
             />
             <h4>Enter Date</h4>
             <input
               className="form-control"
               type="datetime-local"
-              onChange={event => this.setState({dueDate: event.target.value})}
+              onChange={event => this.setState({ dueDate: event.target.value })}
             />
           </div>
           <button
@@ -79,14 +93,14 @@ class App extends Component {
             Add Appointment
           </button>
         </div>
-        { this.renderReminders() }
+        {this.renderReminders()}
         <div
           className="btn btn-danger"
           onClick={() => this.props.clearReminders()}
         >
-        Remove Appointments
+          Remove Appointments
         </div>
-         {/* <SMSForm />  */}
+        {/* <SMSForm />  */}
       </div>
     )
   }
