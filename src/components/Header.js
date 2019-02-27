@@ -32,18 +32,18 @@ class Header extends Component {
       <div>
         <Navbar color="primary" light expand="md">
           <NavbarBrand href="/">HealthPet</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+          {/* <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar> */}
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink to="/components/">Components</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
+                <NavLink to="https://github.com/reactstrap/reactstrap">
                   GitHub
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
+              {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Options
                 </DropdownToggle>
@@ -53,9 +53,9 @@ class Header extends Component {
                   <DropdownItem divider />
                   <DropdownItem>Reset</DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </UncontrolledDropdown> */}
             </Nav>
-          </Collapse>
+          {/* </Collapse> */}
         </Navbar>
       </div>
     );
