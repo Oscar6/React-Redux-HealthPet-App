@@ -11,7 +11,8 @@ class About extends React.Component {
             <div className="aboutInfo">
                 <h3>About</h3>
                 <div className="aboutParagraph">
-                    <p>HealthPet provides pet owners relief from appointment reminders and its details. </p>
+                    <p>HealthPet provides pet owners relief from appointment reminders and its details.</p>
+                    {/* update about page */}
                 </div>
             </div>
         );
