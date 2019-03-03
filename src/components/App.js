@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addReminder, deleteReminder, clearReminders } from '../actions';
-// import SMSForm from '../SMSForm';
-// import Header from './Header';
 import moment from 'moment';
 import 'moment-timezone';
 
